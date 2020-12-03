@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.header {
+  text-align: center;
+  padding: 25px;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.column {
+  /* initially we set it to 25 to have 4 columns */
+  flex: 25%;
+}
+.column img {
+  padding: 4px;
+  width: 100%;
+  height: auto;
+  vertical-align: center;
+}
+img {
+  filter: grayscale(100%);
+  transition: filter 2s;
+}
+img:hover {
+  filter: grayscale(50%);
+}
+
+@media (max-width: 800px) {
+  /* to have 2 column */
+  .column {
+    flex: 50%;
+  }
+}
+@media (max-width: 600px) {
+  /* to have single column */
+  .column {
+    flex: 100%;
+  }
+}
